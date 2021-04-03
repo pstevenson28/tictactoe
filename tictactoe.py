@@ -114,7 +114,7 @@ def main():
 
     if isBoardFull(board):
         print('Tie Game!')
-
+#Keeps game running, allows user to play again or finish game
 while True:
     answer = input('Do you want to play again? (Y/N)')
     if answer.lower() == 'y' or answer.lower == 'yes':
