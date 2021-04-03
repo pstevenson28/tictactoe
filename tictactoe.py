@@ -8,7 +8,7 @@ def insertLetter(letter, pos):
 
 def spaceIsFree(pos):
     return board[pos] == ' '
-
+#the board that users will see
 def printBoard(board):
     
     print(' ' + board[7] + ' | ' + board[8] + ' | ' + board[9])
