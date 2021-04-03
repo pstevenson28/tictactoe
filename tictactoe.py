@@ -51,7 +51,7 @@ def compMove():
             if isWinner(boardCopy, let):
                 move = i
                 return move
-
+#checks if any corners are open
     cornersOpen = []
     for i in possibleMoves:
         if i in [1,3,7,9]:
@@ -60,11 +60,11 @@ def compMove():
     if len(cornersOpen) > 0:
         move = selectRandom(cornersOpen)
         return move
-
+#checks if the middle space is available
     if 5 in possibleMoves:
         move = 5
         return move
-
+#checks if edges are available
     edgesOpen = []
     for i in possibleMoves:
         if i in [2,4,6,8]:
@@ -74,14 +74,14 @@ def compMove():
         move = selectRandom(edgesOpen)
         
     return move
-
+#random number within the range
 def selectRandom(li):
     import random
     ln = len(li)
     r = random.randrange(0,ln)
     return li[r]
     
-
+#checks if the board is full
 def isBoardFull(board):
     if board.count(' ') > 1:
         return False
